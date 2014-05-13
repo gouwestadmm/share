@@ -1,0 +1,9 @@
+{
+  "name": "share",
+  "version": "0.0.0",
+  "dependencies": {
+  	"bootstrap-sass-twbs" : "latest",
+  	"typesettings" : "latest",
+  	"jquery-waypoints" : "latest"
+  }
+}

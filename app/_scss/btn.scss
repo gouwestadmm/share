@@ -1,0 +1,12 @@
+.btn-outline{
+	border-width: 0.2em;
+	background: transparent;
+	font-weight: 600;
+	&.btn-default{
+		border-color: $btn-default-bg;
+		color: $btn-default-bg;
+		&:hover{
+			color: $brand-primary;
+		}
+	}
+}

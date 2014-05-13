@@ -1,0 +1,132 @@
+// Install Bootstrap first load variables
+
+@import "variables";
+@import "../_bower_components/bootstrap-sass-twbs/vendor/assets/stylesheets/bootstrap";
+
+
+// some reusable layout styles
+@import "layout";
+@import "typography";
+@import "btn";
+
+html, body{
+	height: 100%;
+}
+
+body{
+	margin-top: -30px; // What the f is this??
+}
+
+h1{
+	letter-spacing: -0.037em;
+}
+
+// Set Some Navbar Styles
+.navbar-inverse{
+		padding: 0.2em 4em;
+		@include transition(0.3s all);
+	&:not(.scrolled){
+		background: none;
+		border: none;
+		padding: 2em 4em; // add mobile styles after
+		@include transition(0.3s all);
+	}
+}
+
+.navbar-brand{
+	font-weight: 600;
+	letter-spacing: -0.04em;
+	font-size: 2em;
+	span{
+		letter-spacing: 0.05em;
+		margin-left: 0.25em;
+		text-transform: uppercase;
+		font-size: 0.4em;
+		font-weight: 100;
+	}
+	&:not(.scrolled){
+		color: #fff;
+	}
+}
+
+.navbar-nav{
+}
+
+.homepage-header{
+	position: relative;
+	@include square(100%);
+	@extend .text-center;
+	background: url("../img/img/desk6.jpg") no-repeat;
+	background-size: cover;
+	&:before{
+		@extend .overlay;
+		background: rgba(0,0,0,0.1);
+		content: '';
+	}
+	&:after{
+		@extend .overlay;
+
+	}
+	.header-content{
+		@extend .vert-center;
+	}
+
+	h1{
+		color: #fff;
+		position: relative;
+		font-size: 6em; // fallback stuff
+		font-size: 5vw;
+		padding: 0 20vw;
+	}
+	p{
+		color: #fff;
+	}
+}
+
+// images of objects
+.pand-images{
+	position: relative;
+	background-size: cover;
+	-webkit-filter: grayscale(100%);
+	min-height: 20em;
+	transition: 0.3s all;
+	&:after{
+		@extend .overlay;
+		background: rgba(0,0,0,0.5);
+		content:"";
+	}
+	&:hover{
+		-webkit-filter: grayscale(0%);
+		transition: 0.3s all;
+		&:after{
+			opacity: 0.5;
+		}
+	}
+	color: #fff;
+	.vert-center{
+		z-index: 10;
+	}
+	h4{	
+		font-size: 1.4em;
+		line-height: 1.4em;
+		padding: 0 1em;
+		color: #fff;
+		min-height: 2em;
+		small{
+		display: block;
+		color: #fff;
+		}
+	}
+}
+
+.sharebiz{
+	background-image: url("../img/img/desk6.jpg");
+}
+
+.communicatiehuis{
+	background-image: url("../img/communicatiehuis.jpg");
+}
+
+.ierlandlaan{
+	background-image: url("../img/ierlandlaan.jpg");
+}

@@ -1,0 +1,29 @@
+h2{
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+
+
+@mixin pre-header($bg-color: $brand-primary){
+    &:after{
+      content: " ";
+      display: block;
+      height: 2px;
+      margin: 0.9em auto 1.6em;
+      width: 3em;
+      font-weight: 100;
+      background-color: $bg-color;
+    }
+  }
+
+.pre-header{
+  @include pre-header();
+}
+.lead{
+	font-family: $font-family-serif;
+	font-size: 1.1em;
+	line-height: 1.66667;
+	font-weight: 300;
+	color: $gray;
+}

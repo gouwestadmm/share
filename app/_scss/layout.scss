@@ -1,0 +1,66 @@
+
+/****************************************************************
+
+  BASIC LAYOUT STYLES
+
+****************************************************************/
+
+// full-width container class
+.container-full-width{
+  max-width: none;
+  width: 100% !important;
+}
+
+//  Vertical centering
+.container{
+  position: relative; // Needed for it to work
+  height: 100%;
+}
+
+.text-center{
+  img{
+    margin: 0 auto;
+  }
+}
+
+
+section{
+  padding: 5em 0;
+}
+
+//
+// The default image/content overlay
+//
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include square(100%);
+  // default overlay gradient style
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.3) 26%, rgba(0,0,0,0.55) 71%, rgba(0,0,0,0.8) 100%);
+  background: -webkit-linear-gradient(top,rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.3) 26%, rgba(0,0,0,0.55) 71%, rgba(0,0,0,0.8) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.3) 26%, rgba(0,0,0,0.55) 71%, rgba(0,0,0,0.8) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.3) 26%, rgba(0,0,0,0.55) 71%, rgba(0,0,0,0.8) 100%);
+  &.overlay-hover{
+  }
+}
+
+.content-overlay{
+  h1, h2, h3, h4, h5, h6{
+  color: #fff;
+  }
+}
+
+.vert-center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    @include translate(-50%, -50%); 
+}
+
+.story-width{
+  max-width: 45em;
+  margin: 0 auto;
+}
