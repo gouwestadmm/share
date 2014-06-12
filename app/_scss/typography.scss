@@ -3,8 +3,6 @@ h2{
 	font-weight: 700;
 }
 
-
-
 @mixin pre-header($bg-color: $brand-primary){
     &:after{
       content: " ";
@@ -26,4 +24,10 @@ h2{
 	line-height: 1.66667;
 	font-weight: 300;
 	color: $gray;
+}
+
+.intro {
+font-weight: 300;
+font-size: 1.5em;
+line-height: 1.6em;
 }

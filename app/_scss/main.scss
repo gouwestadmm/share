@@ -8,6 +8,7 @@
 @import "layout";
 @import "typography";
 @import "btn";
+@import "footer";
 
 html, body{
 	height: 100%;
@@ -23,7 +24,7 @@ h1{
 
 // Set Some Navbar Styles
 .navbar-inverse{
-		padding: 0.2em 4em;
+		padding: 0.8em 4em;
 		@include transition(0.3s all);
 	&:not(.scrolled){
 		background: none;
@@ -33,23 +34,51 @@ h1{
 	}
 }
 
-.navbar-brand{
-	font-weight: 600;
-	letter-spacing: -0.04em;
-	font-size: 2em;
-	span{
-		letter-spacing: 0.05em;
-		margin-left: 0.25em;
-		text-transform: uppercase;
-		font-size: 0.4em;
-		font-weight: 100;
+.nav-main{
+	.navbar-brand,
+	.logo{
+		font-weight: 600;
+		letter-spacing: -0.04em;
+		font-size: 2em;
+		span{
+			letter-spacing: 0.05em;
+			margin-left: 0.25em;
+			text-transform: uppercase;
+			font-size: 0.4em;
+			font-weight: 100;
+		}
+		&:not(.scrolled){
+			color: #fff;
+		}
 	}
-	&:not(.scrolled){
-		color: #fff;
+}
+.logo{
+		width: auto;
+		font-weight: 600;
+		letter-spacing: -0.04em;
+		font-size: 2em;
+		span{
+			letter-spacing: 0.05em;
+			margin-left: 0.25em;
+			text-transform: uppercase;
+			font-size: 0.4em;
+			font-weight: 300;
+		}
+	}
+
+.small-nav{
+	padding: 0.2em 3em;
+	margin: 0;
+}
+
+.jumbotron{
+	h1{
+		font-size: 3em !important;
 	}
 }
 
-.navbar-nav{
+.content{
+	background: none;
 }
 
 .homepage-header{
@@ -60,7 +89,7 @@ h1{
 	background-size: cover;
 	&:before{
 		@extend .overlay;
-		background: rgba(0,0,0,0.2);
+		background: rgba(0,0,0,0.3);
 		content: '';
 	}
 	&:after{
@@ -78,9 +107,74 @@ h1{
 		font-size: 5vw;
 		padding: 0 20vw;
 	}
+	h2{
+		span{
+			color: $brand-primary;
+		}
+	}
+	h2, h5, h6{
+		color: #fff;
+	}
+	h5{
+		font-family: $font-family-serif;
+		text-transform: uppercase;
+		letter-spacing: 0.3em;
+		font-size: 1.1em;
+	}
 	p{
 		color: #fff;
 		font-size: 1.5em;
+	}
+}
+
+.comm{
+	background-image: url("../img/communicatiehuis.jpg");
+	height: 95% !important;
+}
+
+.eigenaren{
+	background-image: url("http://sharebiz.nl/img/pand.jpg");
+	height: 100%;
+	font-size: 1.2em;
+	h2{
+		font-size: 3em;	
+	}
+	.pre-header:after{
+		margin-top: 0.5em;
+		margin-bottom: 0.7em;
+	}
+	&:before{
+		background: rgba(0,0,0,0.8);
+		content: '';
+	}
+}
+
+.pand{
+&:before{
+	@extend .overlay;
+	background: rgba(0,0,0,0.8);
+	content: '';
+}
+}
+
+.no-padding{
+	padding: 0;
+}
+
+
+
+.openheid{
+
+}
+
+.pand-intro{
+	padding-top: 0;
+	padding-bottom: 0;
+	.content{
+		padding: 4em 5em;
+	}
+	h1, h2, h3{
+		color: $brand-primary;
 	}
 }
 
@@ -89,7 +183,7 @@ h1{
 	position: relative;
 	background-size: cover;
 	-webkit-filter: grayscale(100%);
-	min-height: 20em;
+	min-height: 28em;
 	transition: 0.3s all;
 	&:after{
 		@extend .overlay;
@@ -107,8 +201,8 @@ h1{
 	.vert-center{
 		z-index: 10;
 	}
-	h4{	
-		font-size: 1.4em;
+	h3{	
+		font-size: 1.6em;
 		line-height: 2em;
 		padding: 0 1em;
 		color: #fff;
@@ -158,5 +252,108 @@ h1{
 		font-size: 1.9em;
 		line-height: 1.4em;
 		letter-spacing: 0.1em;
+	}
+	.btn{
+		position: relative;
+		z-index: 10;
+	}
+}
+
+
+.ondernemers{
+	background: $gray-lighter;
+	margin: 0 3em;
+}
+
+.logos{
+	position: relative;
+	.col-6{
+		text-align: center;
+	}
+}
+.logobox {
+  height: 8em;
+  width: 100%;
+  table-layout: fixed;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  &:hover{
+  	img{
+	  -webkit-filter: grayscale(0%);
+		transition: 0.3s all;
+  	}
+  }
+}
+.logobox img {
+  transition: transform 0.4s;
+  position: relative;
+  max-height: 90%;
+  -webkit-filter: grayscale(100%);
+  transition: 0.3s all;
+}
+.logobox:before {
+  content:'';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */
+
+}
+.logobox .logo-padding {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 65%;
+  max-height: 80%;
+}
+
+#priceheader{
+	background: $gray-dark;
+}
+
+//
+// Services page
+//
+.services{
+	padding-left: 3em;
+	padding-top: 0;
+	padding-bottom: 0;
+	height: 90%;
+	position: relative;
+	background: $gray-lighter;
+	.container-fluid,
+	.row{
+		height: 100%;
+	}
+	.content{
+		padding: 6em 0;
+	}
+}
+.holder{
+	height: 100%;
+}
+.service-blocks{
+	height: 100%;
+	.col-sm-4{
+		background: #fff;
+		height: 50%;
+		padding: 3em 2em;
+		text-align: center;
+		&:hover{
+			background: $gray-dark;
+			color: #fff;
+			h6, i{
+				color: #fff;
+			}
+		}
+	}
+	h6{
+		font-weight: 600;
+	}
+	i{
+		color: $brand-primary;
+		font-size: 2.8em;
+		padding: 0.5em;
 	}
 }
