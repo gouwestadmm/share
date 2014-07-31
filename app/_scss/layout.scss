@@ -11,6 +11,11 @@
   width: 100% !important;
 }
 
+.main-content{
+  height: 100%;
+  transition: 0.3s all;
+}
+
 //  Vertical centering
 .container{
   position: relative; // Needed for it to work

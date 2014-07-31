@@ -1,6 +1,9 @@
 h2{
-	text-transform: uppercase;
 	font-weight: 700;
+}
+
+h1, h2, h3{
+  text-transform: none;
 }
 
 @mixin pre-header($bg-color: $brand-primary){

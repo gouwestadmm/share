@@ -8,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
-    <link rel="stylesheet" href="http://www.degordian.com/static/css/main.css?r=1401791091">
+   <!-- <link rel="stylesheet" href="http://www.degordian.com/static/css/main.css?r=1401791091">-->
     <link rel="stylesheet" href="http://sharebiz.nl/less/style.css">
 
     <!-- build:css({app,.tmp}) /css/main.css -->
-    <link rel="stylesheet" href="/css/syntax.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="{{ site.url }}/css/syntax.css">
+    <link rel="stylesheet" href="{{ site.url }}/css/main.css">
     <!-- endbuild -->
     <!-- endbuild -->
 
@@ -25,16 +25,20 @@
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
   </head>
-  <body>
+  <body class="{{ page.class }}">
     {% include nav.html %}
     
     <!--[if lt IE 10]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <div class="main-content">
+
     {{ content }}
 
-    <footer>
+    </div>
+
+   <!-- <footer>
 
         <a data-anim="fade-out" href="http://www.degordian.com/site/brief/" class="lets-work-together">Interesse? &nbsp; →</a>
 
@@ -44,12 +48,12 @@
 
                 <div class="row">
 
-                    <a class="navbar-brand footer-logo logo" href="{{ site.url }}">ShareBiz <span>/ Solutions</span></a>
+                    <a class="navbar-brand footer-logo logo" href="{{ site.url }}">Sharebiz<span> /solutions</span></a>
 
                     <div class="col-md-8 col-md-offset-4 md-padding">
 
                         <div class="row">
-                            <!--BEGIN One place-->
+       
                             <div class="col-md-3 place">
                         <h6 class="place-title">
                             Zoetermeer
@@ -60,8 +64,7 @@
                                     <li>zoetermeer@sharebiz.nl</li>
                                 </ul>
                             </div>
-                            <!--END One place-->
-                            <!--BEGIN One place-->
+              
                             <div class="col-md-3 place">
                         <h6 class="place-title">
                             Zoetermeer
@@ -72,8 +75,7 @@
                                     <li>zoetermeer@sharebiz.nl</li>
                                 </ul>
                             </div>
-                            <!--END One place-->
-                            <!--BEGIN One place-->
+                
                             <div class="col-md-3 place">
                          <h6 class="place-title">
                             Zoetermeer
@@ -84,8 +86,7 @@
                                     <li>zoetermeer@sharebiz.nl</li>
                                 </ul>
                             </div>
-                            <!--END One place-->
-                            <!--BEGIN One place-->
+                     
                             <div class="col-md-3 place">
                          <h6 class="place-title">
                             Zoetermeer
@@ -96,7 +97,7 @@
                                     <li>zoetermeer@sharebiz.nl</li>
                                 </ul>
                             </div>
-                            <!--END One place-->
+                         
                         </div>
 
                     </div>
@@ -107,7 +108,7 @@
 
         </div>
 
-    </footer>
+    </footer>-->
 
     {% include scripts.html %}
     {% include googleanalytics.html %}

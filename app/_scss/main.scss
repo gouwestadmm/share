@@ -1,14 +1,16 @@
 // Install Bootstrap first load variables
 
 @import "variables";
-@import "../_bower_components/bootstrap-sass-twbs/vendor/assets/stylesheets/bootstrap";
+@import "../_bower_components/bootstrap-sass-twbs/assets/stylesheets/bootstrap";
 
 
 // some reusable layout styles
 @import "layout";
 @import "typography";
 @import "btn";
+@import "nav";
 @import "footer";
+@import "entrepreneur";
 
 html, body{
 	height: 100%;
@@ -21,6 +23,158 @@ body{
 h1{
 	letter-spacing: -0.037em;
 }
+
+//
+// TEMP Styles for logo design
+//
+
+.logo-tests{
+	font-size: 2.5em;
+
+	.logo{
+		&:hover{
+			text-decoration: none;
+		}
+	}
+
+	.e-one{
+		letter-spacing: -0.06em;
+		color: #0091d1;
+		em{
+			text-transform: uppercase;
+			color: $gray;
+			font-size: 0.5em;
+			font-weight: 400;
+		}
+	}
+
+	.e-two{
+		color: #F0AD2D;
+	}
+
+	.e-three{
+		font-kerning: normal;
+		background: $gray-lighter;
+		color: $gray;
+		padding: 1em 2em;
+		font-weight: 300;
+		letter-spacing: -0.03em;
+		span{
+			font-family: $font-family-serif;
+			text-transform: lowercase;
+			font-style: italic;
+			font-size: 0.6em;
+			letter-spacing: -0.07em;
+			margin-right: -0.2em;
+		}
+	}
+
+	.e-four{
+		font-kerning: normal;
+		background: $gray-dark;
+		color: #fff;
+		padding: 0.4em 0.6em;
+		span{
+			margin-right: -0.3em;
+		}
+	}
+
+	.e-five{
+		font-size: 1.7em;
+		font-kerning: normal;
+		background: #B9FFF2;
+		color: #296157;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: -0.018em;
+		padding: 0.8em 0.8em;
+	}
+
+	.e-six{
+		font-kerning: normal;
+		line-height: 0.5em;
+		color: #2A3A48;
+		.gray{
+			color: #7E979C;
+		}
+		span{
+			font-weight: 600;
+		}
+	}
+
+	.e-seven{
+		font-kerning: normal;
+		line-height: 0.8em;
+		color: #176F2D;
+		letter-spacing: -0.079em;
+		.gray{
+			color: $gray;
+		}
+	}
+
+	.e-eight{
+		font-kerning: normal;
+		color: #BB010C;
+		padding: 0.8em 0.8em;
+		letter-spacing: -0.075em;
+		font-weight: 500;
+		em{
+			font-weight: 600;
+		}
+	}
+
+	.e-nine{
+		font-kerning: normal;
+		color: #BB010C;
+		padding: 0.8em 0.8em;
+		letter-spacing: -0.075em;
+		font-weight: 500;
+		em{
+			font-weight: 600;
+			font-style: italic;
+		}
+	}
+
+	.e-ten{
+		font-kerning: normal;
+		background: #BB010C;
+		color: #fff;
+		padding: 0.8em 0.8em;
+		letter-spacing: -0.075em;
+		font-weight: 500;
+		em{
+			font-weight: 600;
+			font-style: italic;
+		}
+	}
+
+	.e-eleven{
+		font-kerning: normal;
+		line-height: 0.5em;
+		color: #BB010C;
+		letter-spacing: -0.065em;
+		.gray{
+			color: $gray-dark;
+		}
+		span{
+			font-weight: 600;
+		}
+	}
+}
+
+.e-eleven{
+	font-size: 2.5em;
+		font-kerning: normal;
+		line-height: 0.5em;
+		color: #BB010C;
+		letter-spacing: -0.065em;
+		.gray{
+			color: $gray-dark;
+		}
+		span{
+			font-weight: 600;
+		}
+	}
 
 // Set Some Navbar Styles
 .navbar-inverse{
@@ -57,7 +211,7 @@ h1{
 		font-weight: 600;
 		letter-spacing: -0.04em;
 		font-size: 2em;
-		span{
+		.small{
 			letter-spacing: 0.05em;
 			margin-left: 0.25em;
 			text-transform: uppercase;
@@ -89,7 +243,7 @@ h1{
 	background-size: cover;
 	&:before{
 		@extend .overlay;
-		background: rgba(0,0,0,0.3);
+		background: rgba(0,0,0,0.1);
 		content: '';
 	}
 	&:after{
@@ -128,7 +282,8 @@ h1{
 }
 
 .comm{
-	background-image: url("../img/communicatiehuis.jpg");
+	background-image: url("../img/com-huis/header.jpg");
+	background-attachment: fixed;
 	height: 95% !important;
 }
 
