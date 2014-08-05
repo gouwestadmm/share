@@ -352,13 +352,13 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
 
-$navbar-default-color:             $gray-lighter;
-$navbar-default-bg:                $brand-primary !default;
+$navbar-default-color:             $gray-dark;
+$navbar-default-bg:                $gray-lighter !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
-$navbar-default-link-color:                $gray-lighter !default;
-$navbar-default-link-hover-color:          #fff !default;
+$navbar-default-link-color:                $brand-primary !default;
+$navbar-default-link-hover-color:          darken($brand-primary, 10%) !default;
 $navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         darken($brand-primary, 50%) !default;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;

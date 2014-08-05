@@ -177,13 +177,17 @@ h1{
 	}
 
 // Set Some Navbar Styles
-.navbar-inverse{
+.navbar{
+	@media (min-width: $screen-tablet) {
 		padding: 0.8em 4em;
+	}
 		@include transition(0.3s all);
 	&:not(.scrolled){
 		background: none;
 		border: none;
-		padding: 2em 4em; // add mobile styles after
+		@media (min-width: $screen-tablet) {
+			padding: 2em 4em; // add mobile styles after
+		}
 		@include transition(0.3s all);
 	}
 }
@@ -202,7 +206,11 @@ h1{
 			font-weight: 100;
 		}
 		&:not(.scrolled){
-			color: #fff;
+			.e-eleven{
+				.gray{
+					color: $gray-darker;
+				}
+			}
 		}
 	}
 }
@@ -326,7 +334,9 @@ h1{
 	padding-top: 0;
 	padding-bottom: 0;
 	.content{
-		padding: 4em 5em;
+		@media (min-width: $screen-tablet) {
+			padding: 4em 5em;
+		}
 	}
 	h1, h2, h3{
 		color: $brand-primary;
